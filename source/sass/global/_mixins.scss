@@ -1,0 +1,32 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin pseudo {
+  content: "";
+
+  position: absolute;
+
+  display: block;
+
+  background-repeat: no-repeat;
+}
+
+// @mixin wrapper {
+//   margin: 0 auto;
+
+//   @media (min-width: $max-width) {
+//     max-width: $max-width;
+//   }
+
+//   @media (max-width: $max-width) {
+//     width: 100%;
+//   }
+
+//   @media (max-width: $mobile-width) {
+//     max-width: $mobile-width;
+//   }
+// }

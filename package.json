@@ -1,0 +1,11 @@
+{
+  "name": "rs-coding",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run sass",
+    "sass": "sass --watch source/sass/style.scss source/css/style.css"
+  },
+  "devDependencies": {
+    "sass": "1.26.8"
+  }
+}
