@@ -1,0 +1,20 @@
+.link {
+  font-family: $font-title;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  font-style: normal;
+  text-align: left;
+  color: $color-main;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-additional;
+  }
+
+  &:active {
+    color: transparentize($color-additional, 0.1);
+  }
+}

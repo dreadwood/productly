@@ -14,6 +14,7 @@
   border: 1px solid $color-main;
   border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s; // вынести в миксины или переменные
 
   &:hover,
   &:focus {
@@ -35,5 +36,13 @@
 
     background-color: $color-white;
     border: 1px solid $color-border;
+  }
+
+  &--border:hover,
+  &--border:focus {
+    color: $color-title;
+
+    background-color: $color-white;
+    border: 1px solid $color-additional;
   }
 }

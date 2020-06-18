@@ -49,6 +49,18 @@
 @font-face {
   font-family: "Poppins";
   src:
+    local("Poppins-SemiBold"),
+    local("Poppins-SemiBold"),
+    url("../fonts/poppins-semi-bold.woff2") format("woff2"),
+    url("../fonts/poppins-semi-bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src:
     local("Poppins Bold"),
     local("Poppins-Bold"),
     url("../fonts/poppins-bold.woff2") format("woff2"),
