@@ -10,38 +10,38 @@
 
 <body>
   <header class="header">
-    <div class="wrapper">
-      <a class="header__logo" href="#">
-        <img src="" alt="">
+    <div class="header__wrapper wrapper">
+      <a class="header__logo">
+        <img class="header__logo-img" src="img/logo.svg" width="191" height="32" alt="Logo roductly Company">
       </a>
       <nav class="header__nav">
         <ul class="nav">
           <li class="nav__item">
-            <a href="#">Home</a>
+            <a class="nav__link" href="#">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#">Services</a>
+            <a class="nav__link" href="#">Services</a>
           </li>
           <li class="nav__item">
-            <a href="#">About</a>
+            <a class="nav__link" href="#">About</a>
           </li>
           <li class="nav__item">
-            <a href="#">Product</a>
+            <a class="nav__link" href="#">Product</a>
           </li>
         </ul>
       </nav>
       <div class="header__buttons">
-        <button class="button">Sign In</button>
-        <button class="button button--color">Sign Up</button>
+        <button class="header__button button button--border">Sign In</button>
+        <button class="header__button button">Sign Up</button>
       </div>
     </div>
   </header>
 
   <main>
-    <h1>Page Productly Company</h1>
+    <h1 class="visually-hidden">Page Productly Company</h1>
 
     <section class="promo">
-      <div class="promo__wrapper">
+      <div class="promo__wrapper wrapper">
         <h2 class="promo__title">The Design Thinking superpowers</h2>
         <p class="promo__text">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way
           to imagine your next user experience.</p>
@@ -53,31 +53,33 @@
     </section>
 
     <section class="tools">
-      <h2 class="tools__title title">We design tools to unveil your superpowers</h2>
-      <!-- переименовать класс list -->
-      <ul class="tools__list list">
-        <li class="list__item">
-          <h3 class="list__title">First click tests</h3>
-          <p class="list__text text">While most people enjoy casino gambling</p>
-        </li>
-        <li class="list__item">
-          <h3 class="list__title">Design surveys</h3>
-          <p class="list__text text">Sports betting, lottery and bingo playing for the fun</p>
-        </li>
-        <li class="list__item">
-          <h3 class="list__title">Preference tests</h3>
-          <p class="list__text text">The Myspace page defines the individual</p>
-        </li>
-        <li class="list__item">
-          <h3 class="list__title">Five second tests</h3>
-          <p class="list__text text">Personal choices and the overall personality of the person</p>
-        </li>
-      </ul>
-      <button class="tools__button button button--color">Sign Up now</button>
+      <div class="tools__wrapper wrapper">
+        <h2 class="tools__title title">We design tools to unveil your superpowers</h2>
+        <!-- переименовать класс list -->
+        <ul class="tools__list list">
+          <li class="list__item">
+            <h3 class="list__title">First click tests</h3>
+            <p class="list__text text">While most people enjoy casino gambling</p>
+          </li>
+          <li class="list__item">
+            <h3 class="list__title">Design surveys</h3>
+            <p class="list__text text">Sports betting, lottery and bingo playing for the fun</p>
+          </li>
+          <li class="list__item">
+            <h3 class="list__title">Preference tests</h3>
+            <p class="list__text text">The Myspace page defines the individual</p>
+          </li>
+          <li class="list__item">
+            <h3 class="list__title">Five second tests</h3>
+            <p class="list__text text">Personal choices and the overall personality of the person</p>
+          </li>
+        </ul>
+        <button class="tools__button button button--color">Sign Up now</button>
+      </div>
     </section>
 
     <section class="strategies">
-      <div class="wrapper">
+      <div class="strategies__wrapper wrapper">
         <h2 class="strategies__title title">Marketing Strategies</h2>
         <p class="strategies__text text">Join 40,000+ other marketers and get proven strategies on email marketing</p>
         <ul class="strategies__tags">
@@ -162,8 +164,8 @@
       </div>
     </section>
 
-    <section>
-      <div class="about-us__wrapper">
+    <section class="about-us">
+      <div class="about-us__wrapper wrapper">
         <h2 class="about-us__title title">About Us</h2>
         <p class="about-us__text text">Your About Us page is vital. It’s often the first stop in any user’s journey
           through a website or blog. It also shouldn’t be their last, because first impressions count online just as
@@ -194,7 +196,7 @@
     </section>
 
     <section class="contact-us">
-      <div class="contact-us__wrapper">
+      <div class="contact-us__wrapper wrapper">
         <h2 class="contact-us__title title">Contact Us</h2>
         <div>
           <div class="contact-us__content">
@@ -209,12 +211,12 @@
           <div class="contact-us__form">
             <form action>
               <div>
-                <label for="name"></label>
+                <label class="visually-hidden" for="name">Name</label>
                 <input class="name" id="name" type="text" name="name" placeholder="Your name">
-                <label for=""></label>
+                <label class="visually-hidden" for="tel">Phone</label>
                 <input class="tel" id="tel" type="text" name="tel" placeholder="Your email">
-                <label for="message"></label>
               </div>
+              <label class="visually-hidden" for="message">Message</label>
               <textarea class="message" id="message" name="message">What do you want to ask?</textarea>
               <button type="submit">Send</button>
             </form>
@@ -225,7 +227,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="footer__wrapper wrapper">
       <a href="" class="footer__logo">
         <img src="" alt="">
       </a>

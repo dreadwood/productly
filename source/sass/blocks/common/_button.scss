@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  padding: 14px 10px 15px 10px;
+
+  font-family: $font-deafult;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: $color-white;
+
+  background-color: $color-main;
+  border: 1px solid $color-main;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+
+    background-color: $color-additional;
+    border: 1px solid $color-additional;
+  }
+
+  &:active {
+    color: $color-white;
+
+    background-color: transparentize($color-additional, 0.1);
+    border: 1px solid transparentize($color-additional, 0.1);
+  }
+
+  &--border {
+    color: $color-title;
+
+    background-color: $color-white;
+    border: 1px solid $color-border;
+  }
+}

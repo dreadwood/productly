@@ -3,4 +3,14 @@
 @import "global/constants";
 @import "global/mixins";
 @import "global/global";
-@import "global/visually-hidden";
+
+// common blocks
+@import "blocks/common/visually-hidden";
+@import "blocks/common/wrapper";
+@import "blocks/common/button";
+@import "blocks/common/title";
+@import "blocks/common/text";
+
+// block
+@import "blocks/header";
+@import "blocks/nav";

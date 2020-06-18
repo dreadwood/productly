@@ -1,8 +1,19 @@
 *,
 *::before,
-*::after,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  box-sizing: inherit;
+  font-family: $font-deafult;
+  font-size: 10px;
+  line-height: 162%;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  color: $color-text;
+
+  box-sizing: border-box;
 }
 
 body {
@@ -13,14 +24,6 @@ body {
   // min-width: $mobile-width;
   margin: 0;
   padding: 0;
-
-  font-family: $font-deafult;
-  font-size: 10px;
-  line-height: 162%;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
-  color: $color-text;
 
   background-color: $color-white;
 }

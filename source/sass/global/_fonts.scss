@@ -13,6 +13,18 @@
 @font-face {
   font-family: "Open Sans";
   src:
+    local("OpenSans SemiBold"),
+    local("OpenSans-SemiBold"),
+    url("../fonts/open-sans-semi-bold.woff2") format("woff2"),
+    url("../fonts/open-sans-semi-bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
     local("OpenSans Bold"),
     local("OpenSans-Bold"),
     url("../fonts/open-sans-bold.woff2") format("woff2"),
