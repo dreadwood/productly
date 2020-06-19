@@ -5,14 +5,12 @@
   list-style: none;
 }
 
-@mixin pseudo {
-  content: "";
-
-  position: absolute;
-
-  display: block;
-
-  background-repeat: no-repeat;
+@mixin font($size: 1.6rem, $height: 2.4rem, $weight: 400, $align: left, $style: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  font-style: $style;
+  text-align: $align;
 }
 
 // @mixin wrapper {
@@ -29,4 +27,8 @@
 //   @media (max-width: $mobile-width) {
 //     max-width: $mobile-width;
 //   }
+// }
+
+// ul {
+//   @include reset-list();
 // }

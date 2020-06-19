@@ -1,11 +1,14 @@
 // global
 @import "global/fonts";
 @import "global/constants";
+@import "global/extend";
 @import "global/mixins";
 @import "global/global";
 
+//vendor
+@import "vendor/visually-hidden";
+
 // common blocks
-@import "blocks/common/visually-hidden";
 @import "blocks/common/wrapper";
 @import "blocks/common/button";
 @import "blocks/common/link";

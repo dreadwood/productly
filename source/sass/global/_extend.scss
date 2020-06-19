@@ -1,0 +1,32 @@
+%reset-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+%pseudo {
+  content: "";
+
+  position: absolute;
+
+  display: block;
+
+  background-repeat: no-repeat;
+}
+
+%font-title {
+  font-family: $font-title;
+}
+
+%font-default {
+  font-family: $font-default;
+}
+
+%transition {
+  transition: all 0.3s ease-out;
+}
+
+// block::before {
+//   @extend %pseudo;
+// }

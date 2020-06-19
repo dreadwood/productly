@@ -2,19 +2,16 @@
   display: block;
   padding: 14px 10px 15px 10px;
 
-  font-family: $font-deafult;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  font-weight: 700;
-  font-style: normal;
-  text-align: center;
+  @extend %font-default;
+  @extend %transition;
+  @include font(1.6rem, 2.2rem, 700, center);
+
   color: $color-white;
 
   background-color: $color-main;
   border: 1px solid $color-main;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s; // вынести в миксины или переменные
 
   &:hover,
   &:focus {

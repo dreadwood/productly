@@ -5,12 +5,9 @@
 }
 
 html {
-  font-family: $font-deafult;
-  font-size: 10px;
-  line-height: 162%;
-  font-weight: 400;
-  font-style: normal;
-  text-align: left;
+  @extend %font-default;
+  @include font(10px, 162%);
+  
   color: $color-text;
 
   box-sizing: border-box;
