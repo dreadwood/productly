@@ -1,0 +1,63 @@
+.contact-us {
+  background-color: $color-bg;
+}
+
+.contact-us__wrapper {
+  padding: 62px 0 82px 0;
+}
+
+.contact-us__title {
+  margin-bottom: 17px;
+}
+
+.contact-us__2-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-us__content {
+  width: 525px;
+  margin-right: 20px;
+}
+
+.contact-us__text {
+  margin-bottom: 33px;
+}
+
+.contact-us__contact {
+  @extend %transition;
+  @include font(2.5rem, 2.6rem);
+
+  display: flex;
+  align-items: center;
+
+  color: $color-text;
+
+  &:hover,
+  &:focus {
+    color: $color-additional;
+  }
+
+  &::before {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 11px;
+  }
+
+  &--tel {
+    margin-bottom: 19px;
+  }
+
+  &--tel::before {
+    content: url("../img/icons/icon-tel.svg");
+  }
+
+  &--mail::before {
+    content: url("../img/icons/icon-mail.svg");
+  }
+}
+
+.contact-us__form {
+  width: 580px;
+}

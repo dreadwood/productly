@@ -1,0 +1,48 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__input {
+  @extend %font-default;
+  @include font(1.6rem, 2.6rem);
+
+  width: 280px;
+  margin-bottom: 18px;
+  padding: 9px 20px 8px 20px;
+
+  color: $color-title;
+
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  border-radius: 5px;
+  outline: none;
+
+  &::placeholder {
+    color: $color-placeholder;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $color-main;
+  }
+
+  &--invalid {
+    background-color: $color-invalid-bg;
+    border-color: $color-invalid-border;
+  }
+
+  &--textaria {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 20px;
+
+    resize: none;
+  }
+}
+
+.form__button {
+  min-width: 117px;
+  margin-right: auto;
+}
