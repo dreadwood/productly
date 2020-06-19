@@ -1,0 +1,44 @@
+.card-mini {
+  position: relative;
+
+  width: 345px;
+  margin-right: 32px;
+  padding: 36px 76px 34px 35px;
+
+  background-color: $color-white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px transparentize($color-black, 0.95);
+}
+
+.card-mini__title {
+  @include font(1.6rem, 2.6rem, 700);
+
+  margin: 0;
+}
+
+.card-mini__text {
+  @include font(1.4rem, 2.2rem, 400);
+
+  margin: 0;
+}
+
+.card-mini__link {
+  @include font(1.4rem, 2.2rem, 400);
+
+  display: block;
+  margin: 0;
+
+  color: $color-link;
+}
+
+.card-mini__img {
+  position: absolute;
+  top: calc(50% - 98px / 2);
+  right: -32px;
+
+  width: 98px;
+  height: 98px;
+
+  border-radius: 50%;
+  box-shadow: 0px 15px 30px transparentize($color-black, 0.85);
+}
