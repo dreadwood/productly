@@ -1,0 +1,73 @@
+.tools {
+  background-image: url("../img/bg/bg-tools.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.tools__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 90px 0;
+
+}
+
+.tools__title {
+  width: 470px;
+  margin-bottom: 70px;
+
+  text-align: center;
+}
+
+.tools__4-columns {
+  @extend %reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.tools__column {
+  flex-basis: 22%;
+}
+
+.tools__column-title {
+  @include font(2.2rem, 3.0rem, 600);
+
+  margin: 0;
+  margin-bottom: 16px;
+
+  color: $color-title;
+
+  &::before {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+.tools__column--click .tools__column-title::before {
+  content: url("../img/icons/icon-cursor.svg");
+}
+
+.tools__column--surveys .tools__column-title::before {
+  content: url("../img/icons/icon-wave.svg");
+}
+
+.tools__column--preference .tools__column-title::before {
+  content: url("../img/icons/icon-heart.svg");
+}
+
+.tools__column--personal .tools__column-title::before {
+  content: url("../img/icons/icon-hourglass.svg");
+}
+
+.tools__column-text {
+
+}
+
+.tools__button {
+  min-width: 172px;
+}

@@ -1,0 +1,32 @@
+.tag {
+  display: block;
+  margin: 0;
+  padding: 0 14px;
+
+  @extend %font-default;
+  @extend %transition;
+  @include font(1.3rem, 2.8rem);
+
+  color: $color-text;
+
+  background-color: $color-tag;
+  border: none;
+  border-radius: 90px;
+
+  &--active {
+    color: $color-white;
+
+    background-color: $color-main;
+  }
+
+  &--border {
+    background-color: $color-white;
+    box-shadow: 0 0 0 1px $color-tag-border inset;
+
+    &:hover,
+    &:focus {
+      background-color: $color-hover;
+      box-shadow: none;
+    }
+  }
+}

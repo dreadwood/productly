@@ -18,14 +18,14 @@
     color: $color-white;
 
     background-color: $color-additional;
-    border: 1px solid $color-additional;
+    border-color: $color-additional;
   }
 
   &:active {
     color: $color-white;
 
     background-color: transparentize($color-additional, 0.1);
-    border: 1px solid transparentize($color-additional, 0.1);
+    border-color: ($color-additional, 0.1);
   }
 
   &--border {
@@ -39,7 +39,7 @@
   &--border:focus {
     color: $color-title;
 
-    background-color: $color-white;
-    border: 1px solid $color-additional;
+    background-color: $color-hover;
+    border-color: $color-hover;
   }
 }

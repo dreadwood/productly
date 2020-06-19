@@ -3,7 +3,7 @@
   margin: 0;
 
   @extend %font-title;
-  @include font(3.5rem, 4.6rem, 700, center);
+  @include font(3.5rem, 4.6rem, 700);
 
   color: $color-title;
 }

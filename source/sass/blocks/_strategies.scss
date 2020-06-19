@@ -1,0 +1,50 @@
+.strategies {
+
+}
+
+.strategies__wrapper {
+  padding: 30px 0;
+}
+
+.strategies__title {
+  margin-bottom: 24px;
+}
+
+.strategies__text {
+  margin-bottom: 24px;
+}
+
+.strategies__tag-list {
+  display: flex;
+  margin-bottom: 31px;
+}
+
+.strategies__tag {
+  margin-right: 7px;
+
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.strategies__tag.tag--active {
+  cursor: auto;
+}
+
+.strategies__cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.strategies__card {
+  flex-basis: 377px;
+  margin-bottom: 30px;
+
+  &--long {
+    flex-basis: 787px;
+  }
+}
