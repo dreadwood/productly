@@ -23,12 +23,18 @@
 }
 
 .card-mini__link {
+  @extend %transition;
   @include font(1.4rem, 2.2rem, 400);
 
   display: block;
   margin: 0;
 
   color: $color-link;
+
+  &:hover,
+  &:focus {
+    color: $color-main;
+  }
 }
 
 .card-mini__img {

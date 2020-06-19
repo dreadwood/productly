@@ -1,0 +1,42 @@
+.links-colums {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.links-colums__column {
+  margin-right: 140px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.links-colums__title {
+  @include font(2.0rem, 3.0rem, 600);
+
+  margin: 0;
+  margin-bottom: 15px;
+
+  color: $color-title;
+}
+
+.links-colums__item-list {
+  @extend %reset-list;
+}
+
+.links-colums__item {
+
+}
+
+.links-colums__link {
+  @extend %font-title;
+  @extend %transition;
+  @include font(1.6rem, 3.5rem);
+
+  color: $color-text;
+
+  &:hover,
+  &:focus {
+    color: $color-main;
+  }
+}
