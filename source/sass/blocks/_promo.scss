@@ -8,44 +8,87 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @include media-tablet {
+    padding-top: 0;
+    
+    overflow: hidden;
+  }
+  @include media-mobile-big {
+    flex-direction: column-reverse;
+    padding-top: 12px;
+  }
 }
 
 .promo__content {
-  margin-right: 70px;
+  margin-right: 60px;
+
+  @include media-tablet {
+    flex-shrink: 0;
+    width: 400px;
+    margin-right: 0;
+  }
+  @include media-mobile-big {
+    width: 100%;
+  }
 }
 
 .promo__title {
+  @extend %font-title;
+  @include font(4.4rem, 5.4rem, 700);
+
   margin: 0;
   margin-bottom: 30px;
 
-  font-family: $font-title;
-  font-size: 4.4rem;
-  line-height: 5.4rem;
-  font-weight: 700;
-  font-style: normal;
   color: $color-title;
+
+  @include media-tablet {
+    margin-bottom: 26px;
+  }
+  @include media-mobile-big {
+    @include font(3.2rem, 4.2rem, 700);
+
+    margin-bottom: 9px;
+
+    text-align: center;
+  }
 }
 
 .promo__text {
+  @extend %font-title;
+  @include font(1.8rem, 2.8rem);
+
   margin: 0;
   margin-bottom: 45px;
 
-  font-family: $font-title;
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  font-weight: 400;
-  font-style: normal;
   color: $color-text;
+
+  @include media-mobile-big {
+    @include font(1.6rem, 2.4rem);
+
+    margin-bottom: 23px;
+
+    text-align: center;
+  }
 }
 
 .promo__buttons {
   display: flex;
   align-items: center;
+
+  @include media-mobile-big {
+    flex-direction: column;
+  }
 }
 
 .promo__button {
   margin-right: 44px;
   min-width: 174px;
+
+  @include media-mobile-big {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .promo__link {
@@ -54,6 +97,8 @@
 }
 
 .promo__link-icon {
+  @extend %transition;
+
   margin-right: 9px;
 
   fill: $color-main;
@@ -65,4 +110,12 @@
 
 .promo__link-text {
   display: block;
+}
+
+.promo__img {
+  @include media-mobile-big {
+    width: 84%;
+    height: auto;
+    margin-bottom: 16px;
+  }
 }
