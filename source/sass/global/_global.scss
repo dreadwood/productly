@@ -25,6 +25,10 @@ body {
   background-color: $color-white;
 }
 
+main {
+  flex-grow: 1;
+}
+
 a {
   text-decoration: none;
 }

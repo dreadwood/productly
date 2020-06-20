@@ -7,10 +7,29 @@
   flex-wrap: wrap;
   padding-top: 58px;
   padding-bottom: 52px;
+
+  @include media-tablet {
+    padding-top: 47px;
+  }
+
+  @include media-mobile-big {
+    padding-top: 31px;
+    padding-bottom: 28px;
+  }
 }
 
 .footer__logo {
   margin-right: 150px;
+
+  @include media-tablet {
+    margin-right: auto;
+    margin-bottom: 34px;
+  }
+
+  @include media-mobile-big {
+    width: 129px;
+    margin-bottom: 27px;
+  }
 }
 
 .footer__logo-img {

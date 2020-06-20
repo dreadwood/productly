@@ -1,6 +1,10 @@
 .links-colums {
   display: flex;
   flex-wrap: wrap;
+  
+  @include media-tablet {
+    width: 100%;
+  }
 }
 
 .links-colums__column {
@@ -8,6 +12,20 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include media-tablet {
+    flex-grow: 1;
+    margin-right: 0;
+    padding-right: 40px;
+  }
+
+  @include media-mobile-big {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -18,6 +36,12 @@
   margin-bottom: 15px;
 
   color: $color-title;
+
+  @include media-mobile-big {
+    @include font(1.8rem, 3.0rem, 600);
+
+    margin-bottom: 5px;
+  }
 }
 
 .links-colums__item-list {
