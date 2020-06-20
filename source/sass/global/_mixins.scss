@@ -18,15 +18,15 @@
 // }
 
 @mixin media-tablet {
-  @media (max-width: $desktop-width) { @content; }
+  @media (max-width: $desktop-width - 1) { @content; }
 }
 
 @mixin media-mobile-big {
-  @media (max-width: $tablet-width) { @content; }
+  @media (max-width: $tablet-width - 1) { @content; }
 }
 
 @mixin media-mobile-small {
-  @media (max-width: $mobile-big-width) { @content; }
+  @media (max-width: $mobile-big-width - 1) { @content; }
 }
 
 // ul {
