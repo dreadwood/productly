@@ -354,6 +354,15 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section')
+    sections.forEach((item, i) => {
+      if (i >= 5) {
+        item.style = 'display: none;'
+      }
+    })
+  </script>
 </body>
 
 </html>

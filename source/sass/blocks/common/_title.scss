@@ -6,4 +6,8 @@
   @include font(3.4rem, 4.6rem, 700);
 
   color: $color-title;
+
+  @include media-mobile-big {
+    @include font(2.4rem, 3.3rem, 700);
+  }
 }

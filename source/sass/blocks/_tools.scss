@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0 90px 0;
+  padding-top: 80px;
+  padding-bottom: 90px;
 
 }
 
@@ -29,7 +30,7 @@
 }
 
 .tools__column {
-  flex-basis: 22%;
+  width: 22%;
 }
 
 .tools__column-title {
