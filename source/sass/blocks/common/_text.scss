@@ -6,4 +6,8 @@
   @include font(1.6rem, 2.6rem);
 
   color: $color-text;
+
+  @include media-tablet {
+    text-align: center;
+  }
 }

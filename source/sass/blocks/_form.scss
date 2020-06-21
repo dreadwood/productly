@@ -40,10 +40,27 @@
     margin-bottom: 20px;
 
     resize: none;
+
+    @include media-tablet {
+      margin-bottom: 26px;
+    }
+
+    @include media-mobile-big {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include media-mobile-big {
+    width: 100%;
+    margin-bottom: 16px;
   }
 }
 
 .form__button {
   min-width: 117px;
   margin-right: auto;
+
+  @include media-tablet {
+    margin-left: auto;
+  }
 }

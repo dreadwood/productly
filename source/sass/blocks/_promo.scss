@@ -46,10 +46,10 @@
     margin-bottom: 26px;
   }
   @include media-mobile-big {
-    @include font(3.2rem, 4.2rem, 700);
-
     margin-bottom: 9px;
 
+    font-size: 3.2rem;
+    line-height: 4.2rem;
     text-align: center;
   }
 }
@@ -64,11 +64,10 @@
   color: $color-text;
 
   @include media-mobile-big {
-    @include font(1.6rem, 2.4rem);
-
     margin-bottom: 23px;
 
-    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }
 

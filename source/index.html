@@ -357,11 +357,7 @@
     const sections = document.querySelectorAll('section');
 
     header.style = 'display: none;'
-    sections.forEach((item, i) => {
-      if (i >= 4) {
-        item.style = 'display: none;'
-      }
-    })
+    sections.forEach((item, i) => item.style = (i >= 5) ? 'display: none;' : '');
   </script>
 </body>
 

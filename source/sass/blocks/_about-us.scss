@@ -13,18 +13,13 @@
 .about-us__title{
   margin-bottom: 14px;
 
-  @include media-tablet {
-    text-align: center;
-  }
   @include media-mobile-big {
     margin-bottom: 8px;
   }
 }
 
 .about-us__text{
-  @include media-tablet {
-    text-align: center;
-  }
+
 }
 
 .about-us__people{
