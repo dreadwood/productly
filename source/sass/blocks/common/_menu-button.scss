@@ -1,0 +1,64 @@
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 25px;
+  padding: 0;
+  
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    @extend %transition;
+
+    content: "";
+
+    display: block;
+    width: 31px;
+    height: 3px;
+
+    background-color: $color-menu-icon;
+    border-radius: 5px;
+    transform: rotate(0deg);
+    
+  }
+
+  &::before {
+    transform-origin: top left;
+  }
+
+  &::after {
+    transform-origin: bottom left;
+  }
+
+  &--cross::after,
+  &--cross::after {
+    width: 37px;
+    transform: translate(2px) rotate(-38deg);
+  }
+
+  &--cross::before,
+  &--cross::before {
+    width: 37px;
+    transform: translate(2px) rotate(38deg);
+  }
+
+  &--cross .menu-button__line,
+  &--cross .menu-button__line{
+    opacity: 0;
+  }
+}
+
+.menu-button__line {
+  @extend %transition;
+
+  display: block;
+  width: 31px;
+  height: 3px;
+
+  background-color: $color-menu-icon;
+  border-radius: 5px;
+}

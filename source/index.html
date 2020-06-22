@@ -11,10 +11,13 @@
 <body>
   <header class="header">
     <div class="header__wrapper wrapper">
+      <button class="header__menu-button menu-button" aria-expanded="false" aria-controls="header__nav">
+        <span class="menu-button__line"></span>
+      </button>
       <a class="header__logo">
         <img class="header__logo-img" src="img/logo.svg" width="191" height="32" alt="Logo roductly Company">
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav header__nav--close" id="header__nav">
         <ul class="nav">
           <li class="nav__item">
             <a class="nav__link" href="#">Home</a>
@@ -29,11 +32,11 @@
             <a class="nav__link" href="#">Product</a>
           </li>
         </ul>
+        <div class="header__buttons">
+          <button class="header__button button button--border">Sign In</button>
+          <button class="header__button button">Sign Up</button>
+        </div>
       </nav>
-      <div class="header__buttons">
-        <button class="header__button button button--border">Sign In</button>
-        <button class="header__button button">Sign Up</button>
-      </div>
     </div>
   </header>
 
@@ -225,37 +228,41 @@
     <section class="about-us">
       <div class="about-us__wrapper wrapper">
         <h2 class="about-us__title title">About Us</h2>
-        <p class="about-us__text text">Your About Us page is vital. It’s often the first stop in any user’s journey through a website or blog. It also shouldn’t be their last, because first impressions count online just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a purchase).</p>
+        <p class="about-us__text text">Your About Us page is vital. It’s often the first stop in any user’s journey
+          through a website or blog. It also shouldn’t be their last, because first impressions count online just as
+          much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave without
+          reading your awesome content or completing a conversion action (e.g., signing up for your newsletter, making a
+          purchase).</p>
       </div>
-        <div class="about-us__people">
-          <div class="about-us__card card-mini">
-            <h3 class="card-mini__title">Kathy Rosenberg</h3>
-            <p class="card-mini__text">Product Mannager</p>
-            <a class="card-mini__link" href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
-            <picture>
-              <!-- <source type="image/webp" srcset="img/people/photo-kathy.webp"> -->
-              <img class="card-mini__img" src="img/people/photo-kathy.png" alt="Kathy Rosenberg">
-            </picture>
-          </div>
-          <div class="about-us__card card-mini">
-            <h3 class="card-mini__title">Alexandra Boyarskaya</h3>
-            <p class="card-mini__text">Support Marketing Specialist</p>
-            <a class="card-mini__link" href="mailto:kathyr@gmail.com">alexandrab@gmail.com</a>
-            <picture>
-              <!-- <source type="image/webp" srcset="img/people/photo-alexandra.webp"> -->
-              <img class="card-mini__img" src="img/people/photo-alexandra.png" alt="Alexandra Boyarskaya">
-            </picture>
-          </div>
-          <div class="about-us__card card-mini">
-            <h3 class="card-mini__title">Melani Amini</h3>
-            <p class="card-mini__text">Photographer</p>
-            <a class="card-mini__link" href="mailto:kathyr@gmail.com">melania@gmail.com</a>
-            <picture>
-              <!-- <source type="image/webp" srcset="img/people/photo-melani.webp"> -->
-              <img class="card-mini__img" src="img/people/photo-melani.png" alt="Melani Amini">
-            </picture>
-          </div>
+      <div class="about-us__people">
+        <div class="about-us__card card-mini">
+          <h3 class="card-mini__title">Kathy Rosenberg</h3>
+          <p class="card-mini__text">Product Mannager</p>
+          <a class="card-mini__link" href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
+          <picture>
+            <!-- <source type="image/webp" srcset="img/people/photo-kathy.webp"> -->
+            <img class="card-mini__img" src="img/people/photo-kathy.png" alt="Kathy Rosenberg">
+          </picture>
         </div>
+        <div class="about-us__card card-mini">
+          <h3 class="card-mini__title">Alexandra Boyarskaya</h3>
+          <p class="card-mini__text">Support Marketing Specialist</p>
+          <a class="card-mini__link" href="mailto:kathyr@gmail.com">alexandrab@gmail.com</a>
+          <picture>
+            <!-- <source type="image/webp" srcset="img/people/photo-alexandra.webp"> -->
+            <img class="card-mini__img" src="img/people/photo-alexandra.png" alt="Alexandra Boyarskaya">
+          </picture>
+        </div>
+        <div class="about-us__card card-mini">
+          <h3 class="card-mini__title">Melani Amini</h3>
+          <p class="card-mini__text">Photographer</p>
+          <a class="card-mini__link" href="mailto:kathyr@gmail.com">melania@gmail.com</a>
+          <picture>
+            <!-- <source type="image/webp" srcset="img/people/photo-melani.webp"> -->
+            <img class="card-mini__img" src="img/people/photo-melani.png" alt="Melani Amini">
+          </picture>
+        </div>
+      </div>
 
     </section>
 
@@ -269,8 +276,10 @@
               just as much as they do in the real world. If your visitors aren’t impressed, you can expect them to leave
               without reading your awesome content or completing a conversion action (e.g., signing up for your
               newsletter, making a purchase).</p>
-            <a class="contact-us__contact contact-us__contact--tel" href="tel:+375 (22) 345-00-99">+375 (22) 345-00-99</a>
-            <a class="contact-us__contact contact-us__contact--mail" href="mailto:emailname@gmail.com">emailname@gmail.com</a>
+            <a class="contact-us__contact contact-us__contact--tel" href="tel:+375 (22) 345-00-99">+375 (22)
+              345-00-99</a>
+            <a class="contact-us__contact contact-us__contact--mail"
+              href="mailto:emailname@gmail.com">emailname@gmail.com</a>
           </div>
           <div class="contact-us__form">
             <form class="form" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
@@ -279,7 +288,8 @@
               <label class="visually-hidden" for="email">Phone</label>
               <input class="form__input" id="email" type="email" name="email" placeholder="Your email" required>
               <label class="visually-hidden" for="message">Message</label>
-              <textarea class="form__input form__input--textaria" id="message" name="message" placeholder="What do you want to ask?" required></textarea>
+              <textarea class="form__input form__input--textaria" id="message" name="message"
+                placeholder="What do you want to ask?" required></textarea>
               <button class="form__button button" type="submit">Send</button>
             </form>
           </div>
@@ -352,13 +362,6 @@
     </div>
   </footer>
 
-  <script>
-    const header = document.querySelector('header');
-    const sections = document.querySelectorAll('section');
-
-    header.style = 'display: none;'
-    sections.forEach((item, i) => item.style = (i >= 5) ? 'display: none;' : '');
-  </script>
 </body>
 
 </html>

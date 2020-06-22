@@ -1,7 +1,6 @@
 $font-default: "Open Sans", "Verdana", sans-serif;
 $font-title: "Poppins", "Verdana", sans-serif;
 
-// $desktop-width: 1197px;
 $desktop-width: 1200px;
 $tablet-width: 768px;
 $mobile-big-width: 414px;
@@ -10,9 +9,6 @@ $mobile-small-width: 320px;
 $desktop-padding: 20px;
 $tablet-padding: 46px;
 $mobile-padding: 21px;
-
-// $mobile-width-only: 767px;
-// $tablet-width-only: 1023px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
@@ -28,6 +24,8 @@ $color-hover: #BCD0E5;
 $color-border: #BCD0E5;
 $color-tag: #F5F5F5;
 $color-tag-border: #D7D7D7;
+
+$color-menu-icon: #173A56;
 
 $color-placeholder: #C6C6C6;
 $color-invalid-bg: #FFF0F0;

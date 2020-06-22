@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+
   box-shadow: 0px 4px 20px transparentize($color-black, 0.95);
 }
 
@@ -8,14 +10,98 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 17px;
+
+  @include media-tablet {
+    justify-content: flex-start;
+    min-height: 78px;
+  }
+  @include media-mobile-big {
+    min-height: 68px;
+  }
+
+  &:hover .header__nav {
+    top: 100%;
+  }
+}
+
+.header__menu-button {
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    margin-right: 37px;
+    margin-left: -22px;
+  }
+  @include media-mobile-big {
+    position: absolute;
+    top: 22px;
+    left: 21px;
+
+    margin: 0;
+  }
+}
+
+.header__logo {
+  @include media-tablet {
+    margin-right: auto;
+  }
+  @include media-mobile-big {
+    width: 158px;
+    margin-left: auto;
+  }
 }
 
 .header__logo-img {
   display: block;
 }
 
+.header__nav {
+  @extend %transition;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 66%;
+
+  @include media-tablet {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    justify-content: center;
+    width: 100vw;
+    padding: 46px $tablet-padding 58px $tablet-padding;
+
+    background-color: $color-white;
+
+    // проверить после JS
+    box-shadow: 
+      0px 4px 20px 0px rgba(0, 0, 0, 0.05) inset,
+      0 50vh 0 50vh rgba(80, 80, 80, 0.4);
+  }
+  @include media-mobile-big {
+    flex-direction: column;
+    padding: 36px $mobile-padding 35px $mobile-padding;
+  }
+}
+
 .header__buttons {
   display: flex;
+
+  @include media-tablet {
+    position: absolute;
+    top: -63px;
+    right: $tablet-padding;
+  }
+  @include media-mobile-big {
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+  }
 }
 
 .header__button {
@@ -26,5 +112,34 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include media-mobile-big {
+    min-width: 174px;
+  }
+
+  @include media-mobile-big {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.header__nav--close {
+  @include media-tablet {
+    padding: 0;
+
+    box-shadow: none;
+  }
+}
+
+.header__nav--close .nav {
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.header__nav--close .header__buttons {
+  @include media-mobile-big {
+    display: none;
   }
 }
