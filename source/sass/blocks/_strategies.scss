@@ -72,6 +72,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  &::after {
+    content: "";
+    width: 365px;
+  }
+
+  @include media-tablet {
+    &::after {
+      width: 48%;
+    }
+  }
 }
 
 .strategies__card {
@@ -88,5 +98,9 @@
   @include media-mobile-big {
     width: 100%;
     margin-bottom: 21px;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
