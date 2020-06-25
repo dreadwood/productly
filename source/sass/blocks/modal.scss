@@ -1,12 +1,19 @@
 .modal {
   position: relative;
+  z-index: 15;
 
   width: 675px;
-  // height: 670px;
 
   background-color: $color-white;
   border-radius: 10px;
   box-shadow: 0px 15px 32px transparentize($color-black, 0.95);
+
+  @include media-mobile-big {
+    width: 100%;
+    height: 100vh;
+
+    border-radius: 0;
+  }
 }
 
 .modal__button-close {
@@ -35,7 +42,13 @@
   width: 100%;
   height: 357px;
 
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
+
+  @include media-mobile-big {
+    height: 200px;
+
+    border-radius: 0;
+  }
 }
 
 .modal__content {
@@ -43,7 +56,7 @@
 }
 
 .modal__date {
-  @include font(1.3rem, 1.6rem);
+  @include font(1.3rem, 2.6rem);
 
   margin: 0;
   margin-bottom: 5px;
@@ -56,6 +69,13 @@
   margin-bottom: 9px;
 
   color: $color-title;
+
+  @include media-mobile-big {
+    margin-bottom: 11px;
+
+    font-size: 21px;
+    line-height: 31px;
+  }
 }
 
 .modal__text {
