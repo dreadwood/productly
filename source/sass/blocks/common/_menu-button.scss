@@ -9,6 +9,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   &::after,
   &::before {
@@ -23,7 +24,6 @@
     background-color: $color-menu-icon;
     border-radius: 5px;
     transform: rotate(0deg);
-    
   }
 
   &::before {
@@ -61,4 +61,16 @@
 
   background-color: $color-menu-icon;
   border-radius: 5px;
+}
+
+.menu-button:hover .menu-button__line,
+.menu-button:focus .menu-button__line {
+  background-color: $color-main;
+}
+
+.menu-button:hover::after,
+.menu-button:hover::before,
+.menu-button:focus::after,
+.menu-button:focus::before {
+  background-color: $color-main;
 }
