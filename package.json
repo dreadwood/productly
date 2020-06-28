@@ -3,9 +3,12 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run sass",
-    "sass": "sass --watch source/sass/style.scss source/css/style.css"
+    "sass": "sass --watch source/sass/style.scss source/css/style.css",
+    "test": "webpack --watch"
   },
   "devDependencies": {
-    "sass": "1.26.8"
+    "sass": "1.26.8",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12"
   }
 }
