@@ -10,5 +10,8 @@
     "sass": "1.26.8",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.12"
+  },
+  "dependencies": {
+    "dom-focus-lock": "1.0.4"
   }
 }

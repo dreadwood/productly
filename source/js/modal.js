@@ -1,4 +1,5 @@
 import AbstractComponent from './abstract-component';
+import focusLock from 'dom-focus-lock';
 
 const ESC_CODE = `Escape`;
 
@@ -80,12 +81,14 @@ export default class Modal extends AbstractComponent {
     this.getElement().querySelector(`.modal__button-close`).addEventListener(`click`, this._closeButtonClickHandler);
     this.getElement().addEventListener(`click`, this._overlayClickHandler);
     document.addEventListener(`keydown`, this._escKeydownHandler);
+    focusLock.on(this.getElement());
   }
 
   _removeListeners() {
     this.getElement().querySelector(`.modal__button-close`).removeEventListener(`click`, this._closeButtonClickHandler);
     this.getElement().removeEventListener(`click`, this._overlayClickHandler);
     document.removeEventListener(`keydown`, this._escKeydownHandler);
+    focusLock.off(this.getElement());
   }
 
   _closeButtonClickHandler(){
