@@ -17,7 +17,6 @@ export default class AbstractComponent {
   getElement() {
     if (!this._element) {
       this._element = this.createElement(this.getTemplate());
-      this.setListeners();
     }
 
     return this._element;
@@ -25,9 +24,5 @@ export default class AbstractComponent {
 
   getTemplate() {
     throw new Error(`Abstract method not implemented: getTemplate`);
-  }
-
-  setListeners() {
-    // throw new Error(`Abstract method not implemented: setListeners`);
   }
 }

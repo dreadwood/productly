@@ -14,8 +14,19 @@ export default class Modal extends AbstractComponent {
     this._escKeydownHandler = this._escKeydownHandler.bind(this);
   }
 
+  getElement() {
+    if (!this._element) {
+      this._element = this.createElement(this.getTemplate());
+      this._setListeners();
+      this._setFocusModal();
+    }
+
+    return this._element;
+  }
+
   removeElement() {
     this._removeListeners();
+    this._removeFocusModal();
 
     this._element.remove();
     this._element = null;
@@ -77,18 +88,26 @@ export default class Modal extends AbstractComponent {
     return modalMarkup;
   }
 
-  setListeners() {
+  _setFocusModal() {
+    focusLock.on(this.getElement());
+    document.body.classList.add(`block-modal`);
+  }
+
+  _removeFocusModal() {
+    focusLock.off(this.getElement());
+    document.body.classList.remove(`block-modal`);
+  }
+
+  _setListeners() {
     this.getElement().querySelector(`.modal__button-close`).addEventListener(`click`, this._closeButtonClickHandler);
     this.getElement().addEventListener(`click`, this._overlayClickHandler);
     document.addEventListener(`keydown`, this._escKeydownHandler);
-    focusLock.on(this.getElement());
   }
 
   _removeListeners() {
     this.getElement().querySelector(`.modal__button-close`).removeEventListener(`click`, this._closeButtonClickHandler);
     this.getElement().removeEventListener(`click`, this._overlayClickHandler);
     document.removeEventListener(`keydown`, this._escKeydownHandler);
-    focusLock.off(this.getElement());
   }
 
   _closeButtonClickHandler(){
