@@ -92,6 +92,10 @@
     width: 763px;
   }
 
+  &--interactive {
+    cursor: pointer;
+  }
+
   @include media-tablet {
     width: 48%;
   }

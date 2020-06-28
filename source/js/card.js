@@ -17,8 +17,8 @@ export default class Article extends AbstractComponent {
     } = this._data;
 
     const classElementMarkup = size
-      ? `strategies__card strategies__card--long card` 
-      : `strategies__card card`;
+      ? `strategies__card strategies__card--long strategies__card--interactive card` 
+      : `strategies__card strategies__card--interactive card`;
 
     const tagsMarkup = tags
       .map((tag) => `<span class="card__tag tag">${tag}</span>`)
