@@ -24,7 +24,7 @@ export default class Modal extends AbstractComponent {
     return this._element;
   }
 
-  removeElement() {
+  _removeElement() {
     this._removeListeners();
     this._removeFocusModal();
 
@@ -111,19 +111,19 @@ export default class Modal extends AbstractComponent {
   }
 
   _closeButtonClickHandler(){
-    this.removeElement();
+    this._removeElement();
   }
 
   _overlayClickHandler(evt) {
     if (evt.target.classList.contains('overlay')) {
-      this.removeElement();
+      this._removeElement();
     }
   }
 
   _escKeydownHandler(evt) {
     if (evt.key === ESC_CODE) {
       evt.preventDefault();
-      this.removeElement();
+      this._removeElement();
     }
   }
 }

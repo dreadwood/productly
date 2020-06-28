@@ -8,10 +8,10 @@ export default class Header {
     this._menuButton = this._element.querySelector(`.menu-button`);
     this._nav = this._element.querySelector(`.header__nav`);
 
-    this.init();
+    this._init();
   }
 
-  init() {
+  _init() {
     this._menuButton.addEventListener(`click`, () => {
       this._toogleMenu();
     });

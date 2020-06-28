@@ -16,6 +16,17 @@ export default class Strategies {
     this._setTagListListener();
   }
 
+  renderCards(data) {
+    this._data = data;
+
+    this._cardListElement.innerHTML = ``;
+    this._data.forEach((dataItem) => {
+      renderElement(this._cardListElement, new Card(dataItem));
+    });
+
+    this._setCardListListener();
+  };
+
   _setTagListListener() {
     this._tagListElement.addEventListener(`click`, (evt) => {
       if (evt.target.classList.contains(`tag`)) {
@@ -55,17 +66,6 @@ export default class Strategies {
       }
     })
   }
-
-  renderCards(data) {
-    this._data = data;
-
-    this._cardListElement.innerHTML = ``;
-    this._data.forEach((dataItem) => {
-      renderElement(this._cardListElement, new Card(dataItem));
-    });
-
-    this._setCardListListener();
-  };
 
   _setCardListListener() {
     this._cardListElement.addEventListener('click', (evt) => {
