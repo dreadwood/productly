@@ -6,7 +6,7 @@ export const data = [
       jpg_x1: './img/strategies/strategies-item-1@1x.jpg',
       jpg_x2: './img/strategies/strategies-item-1@2x.jpg',
     },
-    tags: ['Culture', 'Design', 'Art'],
+    tags: ['Culture', 'Art'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
     date: '03.01.2020',
     size: 'big',
@@ -18,7 +18,7 @@ export const data = [
       jpg_x1: './img/strategies/strategies-item-2@1x.jpg',
       jpg_x2: './img/strategies/strategies-item-2@2x.jpg',
     },
-    tags: ['Culture', 'Design', 'Art'],
+    tags: ['Design'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
     date: '05.01.2020'
   },
@@ -29,7 +29,7 @@ export const data = [
       jpg_x1: './img/strategies/strategies-item-3@1x.jpg',
       jpg_x2: './img/strategies/strategies-item-3@2x.jpg',
     },
-    tags: ['Art', 'Design'],
+    tags: ['Art'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
     date: '06.01.2020'
   },
