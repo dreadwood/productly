@@ -4,7 +4,7 @@ export default class Article extends AbstractComponent {
   constructor(data) {
     super();
 
-    this._data = data;
+    this.data = data;
   }
 
   getTemplate() {
@@ -14,15 +14,15 @@ export default class Article extends AbstractComponent {
       img,
       tags,
       size,
-    } = this._data;
+    } = this.data;
 
     const classElementMarkup = size
-      ? `strategies__card strategies__card--long strategies__card--interactive card` 
-      : `strategies__card strategies__card--interactive card`;
+      ? 'strategies__card strategies__card--long strategies__card--interactive card'
+      : 'strategies__card strategies__card--interactive card';
 
     const tagsMarkup = tags
       .map((tag) => `<span class="card__tag tag">${tag}</span>`)
-      .join(`\n`);
+      .join('\n');
 
     const cardMarkup = (
       `<div 
@@ -44,7 +44,7 @@ export default class Article extends AbstractComponent {
           <div class="card__tag-list">${tagsMarkup}</div>
         </div>
       </div>`
-    )
+    );
 
     return cardMarkup;
   }

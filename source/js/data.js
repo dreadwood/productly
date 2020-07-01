@@ -1,4 +1,4 @@
-export const data = [
+export default [
   {
     id: '1',
     title: 'Success Steps For Your Personal Or Business Life Plus Funny Image on the Back',
@@ -20,7 +20,7 @@ export const data = [
     },
     tags: ['Design'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '05.01.2020'
+    date: '05.01.2020',
   },
   {
     id: '3',
@@ -31,7 +31,7 @@ export const data = [
     },
     tags: ['Art'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '06.01.2020'
+    date: '06.01.2020',
   },
   {
     id: '4',
@@ -42,7 +42,7 @@ export const data = [
     },
     tags: ['Culture'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '10.01.2020'
+    date: '10.01.2020',
   },
   {
     id: '5',
@@ -53,6 +53,6 @@ export const data = [
     },
     tags: ['Culture', 'Design', 'Art'],
     content: 'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '13.01.2020'
-  }
+    date: '13.01.2020',
+  },
 ];

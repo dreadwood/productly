@@ -1,35 +1,35 @@
-import AbstractComponent from './abstract-component';
 import focusLock from 'dom-focus-lock';
+import AbstractComponent from './abstract-component';
 
-const ESC_CODE = `Escape`;
+const ESC_CODE = 'Escape';
 
 export default class Modal extends AbstractComponent {
   constructor(data) {
     super();
 
-    this._data = data;
+    this.data = data;
 
-    this._closeButtonClickHandler = this._closeButtonClickHandler.bind(this);
-    this._overlayClickHandler = this._overlayClickHandler.bind(this);
-    this._escKeydownHandler = this._escKeydownHandler.bind(this);
+    this.closeButtonClickHandler = this.closeButtonClickHandler.bind(this);
+    this.overlayClickHandler = this.overlayClickHandler.bind(this);
+    this.escKeydownHandler = this.escKeydownHandler.bind(this);
   }
 
   getElement() {
-    if (!this._element) {
-      this._element = this.createElement(this.getTemplate());
-      this._setListeners();
-      this._setFocusModal();
+    if (!this.element) {
+      this.element = this.createElement(this.getTemplate());
+      this.setListeners();
+      this.setFocusModal();
     }
 
-    return this._element;
+    return this.element;
   }
 
-  _removeElement() {
-    this._removeListeners();
-    this._removeFocusModal();
+  removeElement() {
+    this.removeListeners();
+    this.removeFocusModal();
 
-    this._element.remove();
-    this._element = null;
+    this.element.remove();
+    this.element = null;
   }
 
   getTemplate() {
@@ -39,11 +39,11 @@ export default class Modal extends AbstractComponent {
       img,
       tags,
       content,
-    } = this._data;
+    } = this.data;
 
     const tagsMarkup = tags
       .map((tag) => `<span class="modal__tag tag">${tag}</span>`)
-      .join(`\n`);
+      .join('\n');
 
     const modalMarkup = (
       `<div class="overlay" data-id="${id}">
@@ -83,47 +83,47 @@ export default class Modal extends AbstractComponent {
           </div>
         </div>
       </div>`
-    )
+    );
 
     return modalMarkup;
   }
 
-  _setFocusModal() {
+  setFocusModal() {
     focusLock.on(this.getElement());
-    document.body.classList.add(`block-modal`);
+    document.body.classList.add('block-modal');
   }
 
-  _removeFocusModal() {
+  removeFocusModal() {
     focusLock.off(this.getElement());
-    document.body.classList.remove(`block-modal`);
+    document.body.classList.remove('block-modal');
   }
 
-  _setListeners() {
-    this.getElement().querySelector(`.modal__button-close`).addEventListener(`click`, this._closeButtonClickHandler);
-    this.getElement().addEventListener(`click`, this._overlayClickHandler);
-    document.addEventListener(`keydown`, this._escKeydownHandler);
+  setListeners() {
+    this.getElement().querySelector('.modal__button-close').addEventListener('click', this.closeButtonClickHandler);
+    this.getElement().addEventListener('click', this.overlayClickHandler);
+    document.addEventListener('keydown', this.escKeydownHandler);
   }
 
-  _removeListeners() {
-    this.getElement().querySelector(`.modal__button-close`).removeEventListener(`click`, this._closeButtonClickHandler);
-    this.getElement().removeEventListener(`click`, this._overlayClickHandler);
-    document.removeEventListener(`keydown`, this._escKeydownHandler);
+  removeListeners() {
+    this.getElement().querySelector('.modal__button-close').removeEventListener('click', this.closeButtonClickHandler);
+    this.getElement().removeEventListener('click', this.overlayClickHandler);
+    document.removeEventListener('keydown', this.escKeydownHandler);
   }
 
-  _closeButtonClickHandler(){
-    this._removeElement();
+  closeButtonClickHandler() {
+    this.removeElement();
   }
 
-  _overlayClickHandler(evt) {
+  overlayClickHandler(evt) {
     if (evt.target.classList.contains('overlay')) {
-      this._removeElement();
+      this.removeElement();
     }
   }
 
-  _escKeydownHandler(evt) {
+  escKeydownHandler(evt) {
     if (evt.key === ESC_CODE) {
       evt.preventDefault();
-      this._removeElement();
+      this.removeElement();
     }
   }
 }

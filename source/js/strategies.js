@@ -7,74 +7,74 @@ const renderElement = (container, component) => {
 
 export default class Strategies {
   constructor(element) {
-    this._element = element;
-    this._data = null;
+    this.element = element;
+    this.data = null;
 
-    this._tagListElement = this._element.querySelector(`.strategies__tag-list`);
-    this._cardListElement = this._element.querySelector(`.strategies__cards-list`);
+    this.tagListElement = this.element.querySelector('.strategies__tag-list');
+    this.cardListElement = this.element.querySelector('.strategies__cards-list');
 
-    this._setTagListListener();
+    this.setTagListListener();
   }
 
   renderCards(data) {
-    this._data = data;
+    this.data = data;
 
-    this._cardListElement.innerHTML = ``;
-    this._data.forEach((dataItem) => {
-      renderElement(this._cardListElement, new Card(dataItem));
+    this.cardListElement.innerHTML = '';
+    this.data.forEach((dataItem) => {
+      renderElement(this.cardListElement, new Card(dataItem));
     });
 
-    this._setCardListListener();
-  };
+    this.setCardListListener();
+  }
 
-  _setTagListListener() {
-    this._tagListElement.addEventListener(`click`, (evt) => {
-      if (evt.target.classList.contains(`tag`)) {
+  setTagListListener() {
+    this.tagListElement.addEventListener('click', (evt) => {
+      if (evt.target.classList.contains('tag')) {
         const selectedTag = evt.target;
-        this._removeActiveClassTags();
-        this._addActiveClassTags(selectedTag)
-        this._filterCardsByTag(selectedTag);
+        this.removeActiveClassTags();
+        this.addActiveClassTags(selectedTag);
+        this.filterCardsByTag(selectedTag);
       }
-    })
+    });
   }
 
-  _removeActiveClassTags() {
-    const tags = this._tagListElement.querySelectorAll(`.tag`);
+  removeActiveClassTags() {
+    const tags = this.tagListElement.querySelectorAll('.tag');
     tags.forEach((tag) => {
-      tag.classList.remove(`tag--active`);
-      tag.classList.add(`tag--border`);
-    })
+      tag.classList.remove('tag--active');
+      tag.classList.add('tag--border');
+    });
   }
 
-  _addActiveClassTags (selectedTag) {
-    selectedTag.classList.remove(`tag--border`);
-    selectedTag.classList.add(`tag--active`);
+  addActiveClassTags(selectedTag) {
+    selectedTag.classList.remove('tag--border');
+    selectedTag.classList.add('tag--active');
   }
 
-  _filterCardsByTag(selectedTag) {
-    const cards = this._cardListElement.querySelectorAll(`.card`);
+  filterCardsByTag(selectedTag) {
+    const cards = this.cardListElement.querySelectorAll('.card');
     cards.forEach((card) => {
-      if (selectedTag.innerText === `All`) {
-        card.classList.remove(`strategies__card--hidden`);
+      if (selectedTag.innerText === 'All') {
+        card.classList.remove('strategies__card--hidden');
       } else {
-        card.classList.add(`strategies__card--hidden`);
-        card.querySelectorAll(`.tag`).forEach((tag) => {
+        card.classList.add('strategies__card--hidden');
+        card.querySelectorAll('.tag').forEach((tag) => {
           if (tag.innerText === selectedTag.innerText) {
-            card.classList.remove(`strategies__card--hidden`);
+            card.classList.remove('strategies__card--hidden');
           }
-        })
+        });
       }
-    })
+    });
   }
 
-  _setCardListListener() {
-    this._cardListElement.addEventListener('click', (evt) => {
-      if (evt.target.closest('.strategies__card'))  {
+  setCardListListener() {
+    this.cardListElement.addEventListener('click', (evt) => {
+      if (evt.target.closest('.strategies__card')) {
         const cardId = evt.target.closest('.strategies__card').getAttribute('data-id');
-        const cardData = this._data.find((dataItem) => dataItem.id === cardId);
+        const cardData = this.data.find((dataItem) => dataItem.id === cardId);
 
-        renderElement(document.body, new Modal(cardData))
+        renderElement(document.body, new Modal(cardData));
       }
-    })
-  };
+    });
+  }
 }

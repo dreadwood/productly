@@ -2,49 +2,49 @@ import focusLock from 'dom-focus-lock';
 
 export default class Header {
   constructor(element) {
-    this._element = element;
-    this._isMenuOpen = false;
+    this.element = element;
+    this.isMenuOpen = false;
 
-    this._menuButton = this._element.querySelector(`.menu-button`);
-    this._nav = this._element.querySelector(`.header__nav`);
+    this.menuButton = this.element.querySelector('.menu-button');
+    this.nav = this.element.querySelector('.header__nav');
 
-    this._init();
+    this.init();
   }
 
-  _init() {
-    this._menuButton.addEventListener(`click`, () => {
-      this._toogleMenu();
+  init() {
+    this.menuButton.addEventListener('click', () => {
+      this.toogleMenu();
     });
 
     window.addEventListener('resize', () => {
-      let viewport = document.documentElement.clientWidth;
-      if (viewport >= 1200 && this._isMenuOpen) {
-        this._toogleMenu();
+      const viewport = document.documentElement.clientWidth;
+      if (viewport >= 1200 && this.isMenuOpen) {
+        this.toogleMenu();
       }
     });
   }
 
-  _toogleMenu() {
-    if (this._isMenuOpen) {
-      this._menuButton.classList.remove(`menu-button--cross`);
-      this._nav.classList.add(`header__nav--close`);
-      this._removeFocusModal();
+  toogleMenu() {
+    if (this.isMenuOpen) {
+      this.menuButton.classList.remove('menu-button--cross');
+      this.nav.classList.add('header__nav--close');
+      this.removeFocusModal();
     } else {
-      this._menuButton.classList.add(`menu-button--cross`);
-      this._nav.classList.remove(`header__nav--close`);
-      this._setFocusModal();
+      this.menuButton.classList.add('menu-button--cross');
+      this.nav.classList.remove('header__nav--close');
+      this.setFocusModal();
     }
   }
 
-  _setFocusModal() {
-    focusLock.on(this._element);
-    document.body.classList.add(`block-modal`);
-    this._isMenuOpen = true;
+  setFocusModal() {
+    focusLock.on(this.element);
+    document.body.classList.add('block-modal');
+    this.isMenuOpen = true;
   }
 
-  _removeFocusModal() {
-    focusLock.off(this._element);
-    document.body.classList.remove(`block-modal`);
-    this._isMenuOpen = false;
+  removeFocusModal() {
+    focusLock.off(this.element);
+    document.body.classList.remove('block-modal');
+    this.isMenuOpen = false;
   }
 }

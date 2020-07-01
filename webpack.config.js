@@ -6,8 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: [
-    './source/index.js', 
-    './source/sass/style.scss'
+    './source/index.js',
+    './source/sass/style.scss',
   ],
   output: {
     filename: './js/script.js',
@@ -22,7 +22,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env'],
           },
         },
       },
@@ -31,17 +31,17 @@ module.exports = {
         include: path.join(__dirname, 'source/sass'),
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: true,
               url: false,
             },
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
@@ -55,23 +55,23 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { 
-          from: '*.(woff|woff2)', 
+        {
+          from: '*.(woff|woff2)',
           to: './fonts/',
-          context: 'source/fonts/' 
+          context: 'source/fonts/',
         },
-        { 
-          from: '**/*.(svg|png|jpg|jpeg)', 
+        {
+          from: '**/*.(svg|png|jpg|jpeg)',
           to: './img/',
-          context: './source/img/'
+          context: './source/img/',
         },
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: './css/style.css'
+      filename: './css/style.css',
     }),
     new HtmlWebpackPlugin({
-      template: './source/index.html'
+      template: './source/index.html',
     }),
   ],
-}
+};
