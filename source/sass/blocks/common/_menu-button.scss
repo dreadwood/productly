@@ -5,7 +5,7 @@
   width: 31px;
   height: 25px;
   padding: 0;
-  
+
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -34,20 +34,17 @@
     transform-origin: bottom left;
   }
 
-  &--cross::after,
   &--cross::after {
     width: 37px;
     transform: translate(2px) rotate(-38deg);
   }
 
-  &--cross::before,
   &--cross::before {
     width: 37px;
     transform: translate(2px) rotate(38deg);
   }
 
-  &--cross .menu-button__line,
-  &--cross .menu-button__line{
+  &--cross .menu-button__line {
     opacity: 0;
   }
 }

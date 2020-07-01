@@ -1,8 +1,4 @@
-.about-us {
-
-}
-
-.about-us__wrapper{
+.about-us__wrapper {
   padding-top: 36px;
 
   @include media-mobile-big {
@@ -10,7 +6,7 @@
   }
 }
 
-.about-us__title{
+.about-us__title {
   margin-bottom: 14px;
 
   @include media-mobile-big {
@@ -18,11 +14,7 @@
   }
 }
 
-.about-us__text{
-
-}
-
-.about-us__people{
+.about-us__people {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -41,7 +33,7 @@
   }
 }
 
-.about-us__card{
+.about-us__card {
   flex-shrink: 0;
 
   @include media-tablet {

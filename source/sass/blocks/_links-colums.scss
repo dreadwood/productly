@@ -1,7 +1,7 @@
 .links-colums {
   display: flex;
   flex-wrap: wrap;
-  
+
   @include media-tablet {
     width: 100%;
   }
@@ -19,7 +19,6 @@
     margin-right: 0;
     padding-right: 40px;
   }
-
   @include media-mobile-big {
     margin-bottom: 18px;
 
@@ -30,7 +29,7 @@
 }
 
 .links-colums__title {
-  @include font(2.0rem, 3.0rem, 600);
+  @include font(2rem, 3rem, 600);
 
   margin: 0;
   margin-bottom: 15px;
@@ -39,17 +38,13 @@
 
   @include media-mobile-big {
     margin-bottom: 5px;
-    
+
     font-size: 1.8rem;
   }
 }
 
 .links-colums__item-list {
   @extend %reset-list;
-}
-
-.links-colums__item {
-
 }
 
 .links-colums__link {

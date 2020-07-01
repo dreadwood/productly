@@ -4,7 +4,6 @@
 
   list-style: none;
 }
-
 @mixin font($size: 1.6rem, $height: 2.4rem, $weight: 400, $align: left, $style: normal) {
   font-size: $size;
   line-height: $height;
@@ -12,23 +11,12 @@
   font-style: $style;
   text-align: $align;
 }
-
-// @mixin media-desktop { 
-//   @media (max-width: $desktop-width) { @content; }
-// }
-
 @mixin media-tablet {
   @media (max-width: $desktop-width - 1) { @content; }
 }
-
 @mixin media-mobile-big {
   @media (max-width: $tablet-width - 1) { @content; }
 }
-
 @mixin media-mobile-small {
   @media (max-width: $mobile-big-width - 1) { @content; }
 }
-
-// ul {
-//   @include reset-list();
-// }

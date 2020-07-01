@@ -6,7 +6,7 @@
 
   background-color: $color-white;
   border-radius: 10px;
-  box-shadow: 0px 15px 32px transparentize($color-black, 0.95);
+  box-shadow: 0 15px 32px transparentize($color-black, 0.95);
   overflow: auto;
 
   @include media-mobile-big {

@@ -74,7 +74,7 @@
 }
 
 .tools__column-title {
-  @include font(2.2rem, 3.0rem, 600);
+  @include font(2.2rem, 3rem, 600);
 
   margin: 0;
   margin-bottom: 16px;
@@ -90,7 +90,6 @@
     @include media-tablet {
       margin: 0 auto 20px auto;
     }
-
     @include media-mobile-big {
       margin-bottom: 8px;
     }
@@ -99,7 +98,6 @@
   @include media-tablet {
     text-align: center;
   }
-
   @include media-mobile-big {
     margin-bottom: 2px;
   }
@@ -119,10 +117,6 @@
 
 .tools__column--personal .tools__column-title::before {
   content: url("../img/icons/icon-hourglass.svg");
-}
-
-.tools__column-text {
-
 }
 
 .tools__button {
